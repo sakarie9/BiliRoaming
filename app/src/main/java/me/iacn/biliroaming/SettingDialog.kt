@@ -243,7 +243,7 @@ class SettingDialog(context: Context) : AlertDialog.Builder(context) {
 
         private fun checkCompatibleVersion() {
             val versionCode = getVersionCode(packageName)
-            var supportMusicNotificationHook = versionCode >= 7500300 &&
+            var supportMusicNotificationHook =
                     // from bilibili
                     Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && !Build.MANUFACTURER.lowercase().equals("huawei")
             var supportCustomizeTab = true
