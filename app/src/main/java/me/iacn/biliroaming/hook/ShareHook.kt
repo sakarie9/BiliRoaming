@@ -49,10 +49,8 @@ class ShareHook(classLoader: ClassLoader) : BaseHook(classLoader) {
                     it[0] == "start_progress" -> "start_progress=${it[1]}&t=${it[1].toLong() / 1000}"
                     else -> null
                 }
-            }.joinToString("&", postfix = "&unique_k=2333")
+            }.joinToString("&")
             newUrl.encodedQuery(query)
-        } else {
-            newUrl.appendQueryParameter("unique_k", "2333")
         }
         return newUrl.build().toString()
     }
